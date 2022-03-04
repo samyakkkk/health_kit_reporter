@@ -27,7 +27,7 @@ class WorkoutRoute {
   /// General constructor from JSON payload
   ///
   WorkoutRoute.fromJson(Map<String, dynamic> json)
-      : locations = WorkoutRouteLocation.collect(json['timeSinceSeriesStart']),
+      : locations = WorkoutRouteLocation.collect(json['locations']),
         done = json['done'];
 }
 
@@ -62,7 +62,7 @@ class WorkoutRouteLocation {
   final num altitude;
   final num course;
   final num courseAccuracy;
-  final num floor;
+  final num? floor;
   final num horizontalAccuracy;
   final num speed;
   final num speedAccuracy;
